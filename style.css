@@ -29,47 +29,47 @@
     src: url(Linotte\ Regular.otf);
 }
 
-.font-size-one {
+.fs-one {
     font-size: 13px;
 }
 
-.font-size-two {
+.fs-two {
     font-size: 14px;
 }
 
-.font-size-three {
+.fs-three {
     font-size: 16px;
 }
 
-.font-size-four {
+.fs-four {
     font-size: 18px;
 }
 
-.font-size-five {
+.fs-five {
     font-size: 20px;
 }
 
-.font-size-six {
+.fs-six {
     font-size: 22px;
 }
 
-.font-size-seven {
+.fs-seven {
     font-size: 25px;
 }
 
-.font-size-eight {
+.fs-eight {
     font-size: 30px;
 }
 
-.font-size-nine {
+.fs-nine {
     font-size: 40px;
 }
 
-.font-weight-s {
+.fw-s {
     font-weight: 500px;
 }
 
-.font-weight-l {
+.fw-l {
     font-weight: 600;
 }
 
@@ -192,7 +192,9 @@ body {
     flex-grow: 3;
     margin-left: 4px;
 }
-
+.element-one ,.element-two ,.element-three:hover{
+    cursor: pointer;
+}
 
 .element-four {
     flex-grow: 1;
@@ -202,10 +204,17 @@ body {
     padding: 17px 35px 17px 36px;
 }
 
-.element-four img {
-    width: 45px;
-    height: 45px;
+.element-four a {
+   
+    display:inline-block;
+    font-size:0;
+   
 }
+.element-four img{
+    width:45px;
+    height:45px;
+}
+
 
 .hero__wrapper {
     display: flex;
@@ -213,6 +222,8 @@ body {
     flex-wrap: wrap;
     margin-top: 100px;
 }
+
+
 
 .wrapper-details {
     background-color: var(--white);
@@ -225,10 +236,14 @@ body {
 
 }
 
+.wrapper-details:hover {
+    cursor: pointer;
+}
+
 .wrapper-details img {
     width: 74px;
     height: 72px;
-    margin: 4px 54px 0 54px;
+    margin: 22px 54px 0 54px;
 }
 
 .wrapper-details p {
@@ -367,6 +382,7 @@ body {
 
 .container-left {
     flex: 1 1 50%;
+    font-size: 0;
 
 }
 
@@ -386,10 +402,13 @@ body {
     padding-bottom: 20px;
     padding-right: 130px;
 }
-
-.container-right img {
+.container-right a{
+    width:187px;
+    height:56px;
+    display: inline-block;
     margin-right: 35px;
 }
+
 
 form {
     margin-top: 21px;
@@ -418,7 +437,9 @@ form>button {
     color: var(--green);
 
 }
-
+form>button:hover{
+    cursor: pointer;
+}
 .footer {
     background-color: var(--dark-green);
 }
@@ -428,32 +449,50 @@ form>button {
     flex-wrap: wrap;
     margin: 0 40px;
     justify-content: space-between;
+    
 
+}
+
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0
 }
 
 .footer__container h3 {
     color: var(--white);
     line-height: 0.56;
+
+}
+.footer__container h3:hover{
+    cursor: pointer;
 }
 
-.footer__container p {
+.footer__container a {
     color: var(--light-green);
     line-height: 1.82;
+    display: inline-block;
+    text-decoration: none;
 }
-
-.follow-us a {
+.follow-us>li{
+    display: inline;
+}
+.follow-us a  {
     width: 40px;
     height: 40px;
     background-color: var(--white);
     display: inline-block;
+    border-radius: 50%;
+    margin:10px;
 
 
 }
 
-.follow-us img {
+ .follow-us img {
     width: 40px;
     height: 40px;
     padding: 0 10px;
+    object-fit: contain;
 }
 
 .carousel-left-arrow {
@@ -473,6 +512,9 @@ form>button {
     top: 30px;
 
 
+}
+.arrow:hover{
+    cursor: pointer;;
 }
 
 .left {
@@ -552,16 +594,16 @@ form>button {
 
 
 
-
     .element-one {
         flex-grow: 1;
         margin-bottom: 10px;
+        width:100%;
     }
 
 
     .element-two {
         flex-grow: 1;
-
+width:100%;
         margin-left: 0px;
         margin-bottom: 10px;
     }
@@ -570,11 +612,13 @@ form>button {
         flex-grow: 1;
         margin-left: 0px;
         margin-bottom: 10px;
+        width:100%;
     }
 
 
     .element-four {
         flex-grow: 1;
+        width:100%;
 
     }
 
@@ -602,7 +646,12 @@ form>button {
 
 
     }
-
+.carousel-element>div:nth-last-child(2){
+    display: none;
+}
+.carousel-element>div:nth-last-child(3){
+    display: none;
+}
     .carousel-description {
 
 
@@ -613,9 +662,9 @@ form>button {
 
     }
 
-    .carousel-left-arrow {
-        display: none;
-    }
+   
+
+
 
     .container-left {
         display: none;
@@ -624,9 +673,32 @@ form>button {
     .container-right {
         padding-left: 20px;
     }
+    .container-right a{
+        width:187px;
+        height:56px;
+        display: block;
+        margin-right: 0px;
+        margin-top:8px;
+    }
+    
 
     form button {
         margin-top: 10px;
+        left:0;
+        display: block;
+    }
+    form>input {
+        width: 100%;
+        display: block;
+       
+    }
+    
+    
+    
+    .footer__container{
+        flex-direction: column;
+        margin:0 20px;
+        
     }
 }
 
@@ -649,13 +721,14 @@ form>button {
         flex-grow: 1;
         margin-bottom: 10px;
         margin-right: 8px;
+        width:100%;
     }
 
 
     .element-two {
         flex-grow: 1;
-
-        margin-left: px;
+        width:100%;
+        margin-left: 0px;
         margin-bottom: 10px;
     }
 
@@ -663,12 +736,14 @@ form>button {
         flex-grow: 1;
         margin-left: 0px;
         margin-bottom: 10px;
+        width:100%;
     }
 
 
     .element-four {
         flex-grow: 1;
         margin-top: -10px;
+        width:100%;
 
     }
 
@@ -699,9 +774,7 @@ form>button {
         margin-right: 20px;
     }
 
-    .carousel-left-arrow {
-        display: none;
-    }
+    
 
     .container-left {
         display: none;
@@ -710,17 +783,57 @@ form>button {
     .container-right {
         padding-left: 20px;
     }
+    .container-right a{
+        width:187px;
+        height:56px;
+        display: block;
+        margin-right: 0px;
+        margin-top:8px;
+    }
 
     form button {
         margin-top: 10px;
+        left:0;
+        display: block;
     }
+    .footer__container{
+        flex-direction: column;
+        margin:0 20px;
+    }
+    form>input {
+        width: 100%;
+        display: block;
+       
+    }
+    .carousel-element>div:nth-last-child(2){
+        display: none;
+    }
+    .carousel-element>div:nth-last-child(3){
+        display: none;
+    } 
+    
+    
 }
 
 @media only screen and (min-width: 769px) and (max-width:992px) {
+    .element-one {
+        flex-grow: 1;
+        margin-bottom: 10px;
+        width:100%;
+    }
+
+
+    .element-two {
+        flex-grow: 1;
+        width:100%;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
     .element-three {
         flex-grow: 1;
-        margin-left: 20px;
+        margin-left: 0px;
         margin-top: 10px;
+        width:100%;
     }
 
 
@@ -728,5 +841,11 @@ form>button {
         flex-grow: 1;
         margin-top: 10px;
 
+    }
+    .container-right{
+        margin-left: 48px;
+    }
+    .footer__container ul{
+        margin-right: 10px;
     }
 }
